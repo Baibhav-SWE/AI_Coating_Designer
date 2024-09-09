@@ -6,14 +6,14 @@ from ATR1D import ATR1D
 # General input data
 lam = np.linspace(380, 1080, 851)
 print("new statement")
-Bragg1 = ["MgF2.csv","MgF2.csv","MgF2.csv","MgF2.csv"]  # First Bragg stack
-Bragg2 = ["MgF2.csv"]  # Second Bragg stack
+Bragg1 = ["SIO2.csv","ZrO2.csv","SIO2.csv","ZrO2.csv","SIO2.csv","ZrO2.csv","SIO2.csv","ZrO2.csv"]  # First Bragg stack
+Bragg2 = ["SIO2.csv","ZrO2.csv","SIO2.csv","ZrO2.csv","SIO2.csv","ZrO2.csv","SIO2.csv","ZrO2.csv"]  # Second Bragg stack
 matPSC = Bragg1 + ["GLS_NEW.csv"] + Bragg2  # Combining Bragg1 and Bragg2 with glass in between
-dgls = 1000
-dBragg1 = [110.18,100,300,400]  # Thicknesses for Bragg1 (SiO2/TiO2 x2)
-dBragg2 = [100]  # Thicknesses for Bragg2 (TiO2/SiO2 x2)
+dgls = 320000
+dBragg1 = [106.36,29.51,13.06,99.32,16.04,30.71,44.67,11.84]  # Thicknesses for Bragg1 (SiO2/TiO2 x2)
+dBragg2 = [106.36,29.51,13.06,99.32,16.04,30.71,44.67,11.84]  # Thicknesses for Bragg2 (TiO2/SiO2 x2)
 dPSC = dBragg1 + [dgls] + dBragg2
-incoh = 1e3  # incoherent layer is 1000nm thickness
+incoh = 0 # incoherent layer is 1000nm thickness
 theta = 0
 dAZO=0
 dEVA=0
@@ -38,7 +38,7 @@ print(T_PSC_AZO_EVA_PV['sp'])
 plt.xlabel('Wavelength [nm]')
 plt.ylabel('Fraction')
 plt.xlim(lam[0], lam[-1])
-plt.ylim(0.93, 0.98)
+plt.ylim(0.7, 1)
 plt.legend()
 plt.title('TRA Plot for PSC Structure with Separate Bragg Stacks')
 
