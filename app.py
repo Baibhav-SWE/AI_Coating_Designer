@@ -16,10 +16,10 @@ def calculate():
     
     # Extract data from the request
     lam = np.array(data.get('lam', np.linspace(380, 1080, 851)))
-    Bragg1 = data.get('bragg1', ["SIO2.csv","ZrO2.csv","SIO2.csv","ZrO2.csv","SIO2.csv","ZrO2.csv","SIO2.csv","ZrO2.csv"])
-    dBragg1 = data.get('dBragg1', [106.36,29.51,13.06,99.32,16.04,30.71,44.67,11.84])
-    Bragg2 = data.get('bragg2')
-    dBragg2 = data.get('dBragg2')
+    Bragg2 = data.get('bragg1', ["SIO2.csv","ZrO2.csv","SIO2.csv","ZrO2.csv","SIO2.csv","ZrO2.csv","SIO2.csv","ZrO2.csv"])
+    dBragg2 = data.get('dBragg1', [106.36,29.51,13.06,99.32,16.04,30.71,44.67,11.84])
+    Bragg1 = data.get('bragg2')
+    dBragg1 = data.get('dBragg2')
     dgls = data.get('dgls', 320000)
     theta = data.get('theta', 0)
 
